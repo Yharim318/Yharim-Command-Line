@@ -12,3 +12,4 @@ c:\Users\Graden Likavec\Desktop\Fun Things\VS Projects\app\obj\Debug\net8.0\refi
 c:\Users\Graden Likavec\Desktop\Fun Things\VS Projects\app\obj\Debug\net8.0\app.pdb
 c:\Users\Graden Likavec\Desktop\Fun Things\VS Projects\app\obj\Debug\net8.0\app.genruntimeconfig.cache
 c:\Users\Graden Likavec\Desktop\Fun Things\VS Projects\app\obj\Debug\net8.0\ref\app.dll
+c:\Users\Graden Likavec\Desktop\Fun Things\VS Projects\app\obj\Debug\net8.0\app.sourcelink.json
