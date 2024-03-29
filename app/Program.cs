@@ -16,7 +16,7 @@ void Start(){
             Console.Clear();
             Raffle();
             break;
-        case 3:
+        default:
             playing = false;
             break;
     }

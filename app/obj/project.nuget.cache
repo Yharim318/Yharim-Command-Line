@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3JWR79q7Uw1e2IQ6yNbfZzItI204ay4D9Y0WSGwvVFvuCpA8u2REIrYkOCYl010eLPfgdEiKs+g+NniQCSBsNA==",
+  "dgSpecHash": "eqzz98Y6ESUFAcbP6FdIboLv/qzk1+fEoOKm3lsbgt5Y3cTC3QelLqTDz3cSEm0wzsBj5GVs5LAS459eDtA5FQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
+  "projectFilePath": "c:\\Users\\glika\\Desktop\\Robotics Wpilib\\Yharim-Command-Line\\app\\app.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
