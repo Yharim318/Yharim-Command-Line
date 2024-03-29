@@ -20,8 +20,6 @@ void Start(){
             playing = false;
             break;
     }
-    
-
 }
 void Raffle(){
     List<string> people = [];

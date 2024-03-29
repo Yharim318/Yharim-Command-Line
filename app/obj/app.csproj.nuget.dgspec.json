@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {}
+    "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {
+    "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
+        "projectUniqueName": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
         "projectName": "app",
-        "projectPath": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
+        "projectPath": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
         "packagesPath": "C:\\Users\\Graden Likavec\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\obj\\",
+        "outputPath": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Graden Likavec\\AppData\\Roaming\\NuGet\\NuGet.Config"
