@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Welcome to Yharim's Command Line!");
 Console.WriteLine("----------------------------------");
-List<string> activities = ["Bozo Calculator", "Raffle", "Quit"];
+List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Quit"];
 bool playing = true;
 while(playing){
     Start();
@@ -15,6 +15,14 @@ void Start(){
         case 2:
             Console.Clear();
             Raffle();
+            break;
+        case 3:
+            Console.Clear();
+            Sing();
+            break;
+        case 4:
+            Console.Clear();
+            SecondsAlive();
             break;
         default:
             playing = false;
@@ -39,6 +47,24 @@ int PromptInt(string message){
     int index;
     try{
         index = Convert.ToInt32(indexString);
+    
+    }
+    catch{
+        Console.WriteLine("That is not a valid number. Please try again!");
+        Console.ReadKey();
+        Console.Clear();
+        index = PromptInt(message);
+        
+    }
+    Console.Clear();
+    return index;
+}
+float PromptFloat(string message){
+    Console.WriteLine(message);
+    string indexString = Console.ReadLine();
+    float index;
+    try{
+        index = Convert.ToSingle(indexString);
     
     }
     catch{
@@ -81,4 +107,17 @@ int Prompt(){
     }
     return index;
     
+}
+void Sing(){
+    Console.Beep();
+    Console.WriteLine("Jumpscare!");
+    Console.ReadKey();
+    Console.Clear();
+}
+void SecondsAlive(){
+    float years = PromptFloat("How many years have you been alive?");
+    double seconds = years * 31536000;
+    Console.WriteLine($"You have been alive for:\n{seconds}\nseconds!");
+    Console.ReadKey();
+    Console.Clear();
 }
