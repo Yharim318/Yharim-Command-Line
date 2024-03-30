@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Welcome to Yharim's Command Line!");
 Console.WriteLine("----------------------------------");
-List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Count", "Quit"];
+List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Count", "Test", "Quit"];
 bool playing = true;
 while(playing){
     Start();
@@ -27,6 +27,12 @@ void Start(){
         case 5:
             Console.Clear();
             Count();
+            break;
+        case 6:
+            Console.Clear();
+            Console.WriteLine("This is a test piece of software!");
+            Console.ReadKey();
+            Console.Clear();
             break;
         default:
             playing = false;
