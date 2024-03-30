@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Welcome to Yharim's Command Line!");
 Console.WriteLine("----------------------------------");
-List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", /*"",*/ "Quit"];
+List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Count", "Quit"];
 bool playing = true;
 while(playing){
     Start();
@@ -23,6 +23,10 @@ void Start(){
         case 4:
             Console.Clear();
             SecondsAlive();
+            break;
+        case 5:
+            Console.Clear();
+            Count();
             break;
         default:
             playing = false;
@@ -50,6 +54,7 @@ int PromptInt(string message){
     
     }
     catch{
+        Console.Clear();
         Console.WriteLine("That is not a valid number. Please try again!");
         Console.ReadKey();
         Console.Clear();
@@ -59,8 +64,30 @@ int PromptInt(string message){
     Console.Clear();
     return index;
 }
+float PromptFloatPositive(string message){
+    Console.Write(message);
+    string indexString = Console.ReadLine();
+    float index;
+    try{
+        index = Convert.ToSingle(indexString);
+        if (index < 0){
+            index = Convert.ToByte("Your Mother");
+        }
+    
+    }
+    catch{
+        Console.Clear();
+        Console.WriteLine("That is not a valid number. Please try again!");
+        Console.ReadKey();
+        Console.Clear();
+        index = PromptFloatPositive(message);
+        
+    }
+    Console.Clear();
+    return index;
+}
 float PromptFloat(string message){
-    Console.WriteLine(message);
+    Console.Write(message);
     string indexString = Console.ReadLine();
     float index;
     try{
@@ -68,10 +95,11 @@ float PromptFloat(string message){
     
     }
     catch{
+        Console.Clear();
         Console.WriteLine("That is not a valid number. Please try again!");
         Console.ReadKey();
         Console.Clear();
-        index = PromptInt(message);
+        index = PromptFloat(message);
         
     }
     Console.Clear();
@@ -88,7 +116,7 @@ void BozoCalculator(){
     Console.Clear();
 }
 int Prompt(){
-    Console.WriteLine("Please choose an activity: ");
+    Console.WriteLine("Please choose an activity: \n");
     listActivities();
     string indexString = Console.ReadLine();
     int index;
@@ -116,10 +144,27 @@ void Sing(){
     Console.Clear();
 }
 void SecondsAlive(){
-    float years = PromptFloat("How many years have you been alive?");
+    float years = PromptFloat("How many years have you been alive: ");
     double seconds = years * 31536000;
     Console.WriteLine($"You have been alive for:\n{seconds}\nseconds!");
     Console.ReadKey();
     Console.Clear();
 }
-
+void Count(){
+    double timer = PromptFloatPositive("How many seconds: ");
+    double countTo = timer + DateTime.Now.TimeOfDay.TotalSeconds;
+    double lastTime = -1;
+    // Console.WriteLine(countTo);
+    while (DateTime.Now.TimeOfDay.TotalSeconds < countTo){
+        double timeLeft = Math.Round(countTo - DateTime.Now.TimeOfDay.TotalSeconds + 0.5);
+        if (lastTime != timeLeft){
+            Console.Clear();
+            Console.WriteLine(timeLeft);
+        }
+        lastTime = timeLeft;
+    }
+    Console.Clear();
+    Console.WriteLine($"{timer} seconds have elapsed!");
+    Console.ReadKey();
+    Console.Clear();
+}
