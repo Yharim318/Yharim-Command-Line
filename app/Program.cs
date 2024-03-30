@@ -99,6 +99,7 @@ int Prompt(){
         }
     }
     catch{
+        Console.Clear();
         Console.WriteLine("That is not a valid number. Please try again!");
         Console.ReadKey();
         Console.Clear();
