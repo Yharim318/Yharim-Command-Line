@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Welcome to Yharim's Command Line!");
 Console.WriteLine("----------------------------------");
-List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Quit"];
+List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", /*"",*/ "Quit"];
 bool playing = true;
 while(playing){
     Start();
@@ -121,3 +121,4 @@ void SecondsAlive(){
     Console.ReadKey();
     Console.Clear();
 }
+
