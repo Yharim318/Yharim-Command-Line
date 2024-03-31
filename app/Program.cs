@@ -30,9 +30,7 @@ void Start(){
             break;
         case 6:
             Console.Clear();
-            Console.WriteLine("This is a test piece of software!");
-            Console.ReadKey();
-            Console.Clear();
+            Test();
             break;
         default:
             playing = false;
@@ -171,6 +169,11 @@ void Count(){
     }
     Console.Clear();
     Console.WriteLine($"{timer} seconds have elapsed!");
+    Console.ReadKey();
+    Console.Clear();
+}
+void Test(){
+    Console.WriteLine("This is a test piece of software!");
     Console.ReadKey();
     Console.Clear();
 }
