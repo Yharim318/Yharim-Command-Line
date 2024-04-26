@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {}
+    "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {
+    "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
+        "projectUniqueName": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
         "projectName": "app",
-        "projectPath": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
+        "projectPath": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\app.csproj",
         "packagesPath": "C:\\Users\\Graden Likavec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\obj\\",
+        "outputPath": "c:\\Users\\Graden Likavec\\Desktop\\Fun Things\\VS Projects\\app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Graden Likavec\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

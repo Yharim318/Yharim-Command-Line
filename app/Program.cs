@@ -1,6 +1,8 @@
-﻿Console.WriteLine("Welcome to Yharim's Command Line!");
+﻿using Microsoft.VisualBasic;
+
+Console.WriteLine("Welcome to Yharim's Command Line!");
 Console.WriteLine("----------------------------------");
-List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Count", "Test", "Quit"];
+List<string> activities = ["Bozo Calculator", "Raffle", "Sing", "Seconds Alive", "Count", "Sort", "Quit"];
 bool playing = true;
 while(playing){
     Start();
@@ -30,7 +32,7 @@ void Start(){
             break;
         case 6:
             Console.Clear();
-            Test();
+            Sort();
             break;
         default:
             playing = false;
@@ -47,11 +49,12 @@ void Raffle(){
 }
 string PromptString(string message){
     Console.Write(message);
-    return Console.ReadLine();
+    string? output = Console.ReadLine();
+    return output;
 }
 int PromptInt(string message){
     Console.WriteLine(message);
-    string indexString = Console.ReadLine();
+    string? indexString = Console.ReadLine();
     int index;
     try{
         index = Convert.ToInt32(indexString);
@@ -70,7 +73,7 @@ int PromptInt(string message){
 }
 float PromptFloatPositive(string message){
     Console.Write(message);
-    string indexString = Console.ReadLine();
+    string? indexString = Console.ReadLine();
     float index;
     try{
         index = Convert.ToSingle(indexString);
@@ -92,7 +95,7 @@ float PromptFloatPositive(string message){
 }
 float PromptFloat(string message){
     Console.Write(message);
-    string indexString = Console.ReadLine();
+    string? indexString = Console.ReadLine();
     float index;
     try{
         index = Convert.ToSingle(indexString);
@@ -122,7 +125,7 @@ void BozoCalculator(){
 int Prompt(){
     Console.WriteLine("Please choose an activity: \n");
     listActivities();
-    string indexString = Console.ReadLine();
+    string? indexString = Console.ReadLine();
     int index;
     try{
         index = Convert.ToInt32(indexString);
@@ -140,6 +143,10 @@ int Prompt(){
     }
     return index;
     
+}
+string EncodeIntToDashes(int i)
+{
+    return String.Concat(Enumerable.Repeat("-", i));
 }
 void Sing(){
     Console.Beep();
@@ -172,8 +179,39 @@ void Count(){
     Console.ReadKey();
     Console.Clear();
 }
-void Test(){
-    Console.WriteLine("This is a test piece of software!");
+void Sort(){
+    Random random = new Random();
+    bool passAgain = true;
+    int length = Console.BufferHeight-1;
+    int[] ints = new int[length];
+    for (int i = 0; i < length; i++) 
+    {
+        ints[i] = i + 1;
+    }
+    random.Shuffle(ints);
+    while(passAgain)
+    {
+        passAgain = false;
+ 
+        for (int i = 0; i < ints.Length-1; i++)
+        {
+            if (ints[i] > ints[i+1])
+            {
+                Console.Clear();
+                int buffer1 = ints[i];
+                int buffer2 = ints[i+1];
+                ints[i] = buffer2;
+                ints[i+1] = buffer1;
+                passAgain = true;
+                for(int ii = 0; ii < ints.Length; ii++)
+                {
+                    Console.WriteLine(EncodeIntToDashes(ints[ii]));
+                }
+                Thread.Sleep(3);                
+            }
+        }
+        
+    }
     Console.ReadKey();
     Console.Clear();
 }
